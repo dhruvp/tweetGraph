@@ -2,17 +2,17 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.9'
 gem 'twitter'
-gem 'haml-rails', '>= 0.3.4', :group => :development
+gem 'haml-rails', '>= 0.3.4'
 
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
-gem 'sass'
 
 group :development, :test do
-	gem 'sqlite3'end
+	gem 'sqlite3'
+	gem 'sass'
+end
 group :production do
 	gem 'pg'
 end
