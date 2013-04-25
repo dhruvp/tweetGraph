@@ -1,0 +1,11 @@
+%div{:id => "main", :role => "main"}
+	/ %div{:id => "search"}
+	/ 	=form_tag("/search", :method => "get") do
+	/ 		=label_tag(:query, "Search for:")
+	/ 		= text_field_tag(:query)
+	/ 		=submit_tag("Search")
+	%div{:id => "searchbox"}
+		%input{:type => "textbox", :name => "search", :id => "search"}
+		=button_tag(:type => 'button',:id => "search_button") do
+			=content_tag(:strong, 'Search')
+	%div{:id => "vis"}
