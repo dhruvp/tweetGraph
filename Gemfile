@@ -8,13 +8,13 @@ gem 'haml-rails', '>= 0.3.4'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-
 group :development, :test do
 	gem 'sqlite3'
 	gem 'sass'
 end
 group :production do
 	gem 'pg'
+	gem 'sass'
 end
 
 # Gems used only for assets and not required
