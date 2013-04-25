@@ -11,6 +11,12 @@ gem 'haml-rails', '>= 0.3.4', :group => :development
 gem 'sqlite3'
 gem 'sass'
 
+group :development, :test do
+	gem 'sqlite3'end
+group :production do
+	gem 'pg'
+end
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
