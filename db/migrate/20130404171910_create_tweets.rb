@@ -1,6 +1,6 @@
 class CreateTweets < ActiveRecord::Migration
   def change
-    create_table :tweets :force => true do |t|
+    create_table :tweets  do |t|
     	t.string :name
     	t.string :author
     	t.string :text
