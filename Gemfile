@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.9'
 gem 'twitter'
 gem 'haml-rails', '>= 0.3.4'
-
+gem 'spreadsheet'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -30,6 +30,9 @@ group :assets do
 end
 
 gem 'jquery-rails'
+group :assets do
+	gem 'jquery-ui-rails'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

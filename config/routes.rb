@@ -3,6 +3,8 @@ TweetGraph::Application.routes.draw do
 
   match 'graph(/:query)' => "home#graph", :as =>"graph"
   match 'viz' => "home#viz", :as => "viz"
+  match 'chartviz' => "home#chartviz", :as => "chartviz"
+  match 'chart' => "home#chart", :as => "chart"
   match 'tweetinfo/:id' => "home#tweetinfo", :as => "tweetinfo"
   match 'search' => "home#search", :as => "search"
 

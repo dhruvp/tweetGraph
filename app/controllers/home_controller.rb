@@ -5,7 +5,6 @@ class HomeController < ApplicationController
 			saved_query=false
 			status_list=[]
 			if query
-				puts query
 				status_list=Twitter.search(query, options= {:rpp=>"5",:result_type=>"popular"}).statuses
 			else
 				saved_query=true
@@ -57,6 +56,41 @@ class HomeController < ApplicationController
 	end
 
 	def viz
+  end
+
+  def chartviz
+  end
+
+  def chart
+  	histogram= {}
+  	data=[]
+  	starttime = Tweet.minimum(:time)
+  	ogstart=starttime
+  	endtime = Tweet.maximum(:time)
+  	Tweet.all.each do |tweet|
+  		puts tweet.id
+  		roundedtime=tweet.time.change(:min=>tweet.time.min/5*5)
+  		if histogram[roundedtime]
+  			histogram[roundedtime]+=1
+  		else
+  			histogram[roundedtime]=1
+  		end
+  	end
+  	keyList=histogram.keys.sort!
+  	sum=0
+  	histogram.keys.sort!.each do |key|
+  		point={}
+  		point['x']=key.to_i
+  		sum=sum+histogram[key]
+  		point['y']=sum
+  		data << point
+  	end
+  	respond_to do |format|
+  		format.html
+  		format.json {render :json => data}
+  end
+
+  	
   end
 
   def search

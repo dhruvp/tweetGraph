@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130414223608) do
+ActiveRecord::Schema.define(:version => 20130508202735) do
 
   create_table "connections", :force => true do |t|
     t.integer  "tweet_id"
@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(:version => 20130414223608) do
   end
 
   create_table "tweets", :force => true do |t|
-    t.string   "name"
     t.string   "author"
     t.string   "text"
     t.datetime "created_at",  :null => false
@@ -30,6 +29,7 @@ ActiveRecord::Schema.define(:version => 20130414223608) do
     t.datetime "time"
     t.integer  "tweetid"
     t.datetime "elapsedtime"
+    t.integer  "followers"
   end
 
 end
