@@ -1,0 +1,5 @@
+%h1 Upload your file
+=form_tag(:action=> "uploadFile", :multipart => "true") do
+	= label_tag(:uploadedFile, "Select File")
+	= file_field_tag(:uploadedFile)
+	= submit_tag("Upload")

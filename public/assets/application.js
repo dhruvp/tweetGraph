@@ -27847,7 +27847,6 @@ Rickshaw.Series.FixedDuration = Rickshaw.Class.create(Rickshaw.Series, {
       });
       yAxis.render();
       $('#slider').width(900);
-      jQuery.noConflict();
       return slider = new Rickshaw.Graph.RangeSlider({
         graph: graph,
         element: document.querySelector('#slider')

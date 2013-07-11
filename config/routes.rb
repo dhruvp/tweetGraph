@@ -7,7 +7,8 @@ TweetGraph::Application.routes.draw do
   match 'chart' => "home#chart", :as => "chart"
   match 'tweetinfo/:id' => "home#tweetinfo", :as => "tweetinfo"
   match 'search' => "home#search", :as => "search"
-
+  match 'upload' => "upload#up", :as => "up"
+  match 'uploadFile' => "upload#uploadFile", :as => "uploadFile"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -32,9 +32,10 @@ $ ->
 
 		yAxis.render()
 
+		# jQuery.noConflict()
+
 		$('#slider').width(900)
 
-		jQuery.noConflict()
 		slider = new Rickshaw.Graph.RangeSlider({
 	    graph: graph,
 	    element: document.querySelector('#slider')
